@@ -67,14 +67,14 @@ git ls-files
 git reset HEAD 파일명 => add된 파일을 reset한다
 git checkout -- README.md => modified한 파일을 reset 한다.
 
-#####로그 히스토리 및 얼라이어스를 이용한 새로운 명령어
+#### 로그 히스토리 및 얼라이어스를 이용한 새로운 명령어
 ----
 
 git log --oneline --graph --decorate --all
 git config --global alias.hist "log --oneline --graph --decorate --all"
 git hist -- "로그를 확인하고 싶은 파일"
 
-#####파일명 변경 및 파일 삭제
+#### 파일명 변경 및 파일 삭제
 ----
 
 git mv "변경 대상이 되는 파일명" "내가 변경할 파일명" => 그다음 commit
