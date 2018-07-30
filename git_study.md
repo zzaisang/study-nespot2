@@ -85,8 +85,3 @@ git add -A => untract 파일 및 변경 삭제 파일 등등 모두 staged에 �
 git add -u => not staged인 파일만 staged도 바꿔버림.
 
 
-
-
-
-
-
