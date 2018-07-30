@@ -85,4 +85,18 @@ git 구조
 - git add -A => untract 파일 및 변경 삭제 파일 등등 모두 staged에 올려버린다.
 - git add -u => not staged인 파일만 staged도 바꿔버림.
 
+## git remote
+----
+
+- GitHub에 빈 Remote Repository를 생성한 후 git remote를 이용하여 Local Repository와 연결할 수 있습니다. 다음과 같은 명령을 이용합니다.
+
+```
+git remote add origin “Remote Repository URL”
+```
+
+- 연결이 성공했는지를 다음의 명령어를 이용해서 확인해 볼 수 있습니다.
+
+```
+git remote -v
+```
 
