@@ -1,4 +1,4 @@
-#GIT STUDY
+# GIT STUDY
 
 ----
 ## git project 복사 및 git project push 및 pull 방법
