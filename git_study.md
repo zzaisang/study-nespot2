@@ -51,7 +51,7 @@ git pull oprigin master
 ----
 git 구조
 - tract file(add, modified, commit 파일), untract file(그외)
-- working directory, stage(add 영역), repository(commit 영역)
+- untracked(working directory), stage(add 영역), modified, unmodified(commit 영역)
 
 ![git 구조](https://git-scm.com/book/en/v2/images/lifecycle.png)
 
