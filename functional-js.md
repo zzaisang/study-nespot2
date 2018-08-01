@@ -64,17 +64,7 @@ concurrency              ...      ...      ...          unless
 	4. Promise
 	5. Functon
 	
-- 여기서 1,2,3은 컬렉션 타입입니다. 1,2,3,4,5를 모두 가리켜 functor라고 부릅니다.
-- FunctionalIES는 for..of를 이용하여 데이터를 순환하기 때문에 실질적으로 다루는 데이터 타입은 iterable이라고 할 수 있다.
-- map은 functor를 다룹나다.
+- 여기서 1,2,3은 컬렉션 타입입니다. 1,2,3,4,5를 모두 가리켜 functor 라고 부릅니다.
+- FunctionalIES는 for..of를 이용하여 데이터를 순환하기 때문에 실질적으로 다루는 데이터 타입은 iterable 이라고 할 수 있습니다.
+- map은 functor를 다룹니다.
 - findVal, reduce은 컬렉션을 다룹니다.
-
-
-
-
-
-	
-
- 
-
-
