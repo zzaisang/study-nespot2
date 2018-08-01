@@ -35,7 +35,7 @@ function *generator(coll){
 }
 ```
 
-- Iterable은 아래의 규칙을 따라야함.
+- Iterable은 아래의 규칙을 따라야합니다.
 	1. 순회 할수 있는 데이터를 가지고 있어야 합니다.
 	2. Symbol.iterator 메소드를 가지고 있어야합니다.
 	3. Symbol.iterator 메서드는 iterator 객체를 반환해야 합니다.
@@ -43,9 +43,31 @@ function *generator(coll){
 	5. next 메서드는 #1에 저장되어 있는 데이터에 접근 할수 있어야 합니다.
 	6. iterObj.next() 하면 {value : 저장 데이터, done : false} #1 데이터가 추출 되며 전부다 순회했을 경우 {value: undefined, done: true} 를 반환하도록 합니다.
 
-- 
+- FunctionalES에는 3개의 대표 함수가 있습니다.
+	1. map
+	2. reduce 
+	3. findVal
 
+```
+                                reduce                       (c)findVal
+        map ___________________/   |   \                        /  \
+        / \                   /    |    \                 (c)find   or, and
+    mapC  seriese        pipe   groupBy   filter            /  \
+     |                   go    partition  reject        cond    (c)some, (c)none, (c)every
+concurrency              ...      ...      ...          unless
+```
 
+- FunctionalIES에는 다루는 데이터 type
+	1. [] 
+	2. {} 
+	3. Map //Set은 결과의 크기가 변경될 수 있기 때문에 사용하지 않습니다.
+	4. Promise
+	5. Functon
+	
+- 여기서 1,2,3은 컬렉션 타입입니다. 1,2,3,4,5를 모두 가리켜 functor라고 부릅니다.
+- FunctionalIES는 for..of를 이용하여 데이터를 순환하기 때문에 실질적으로 다루는 데이터 타입은 iterable이라고 할 수 있다.
+- map은 functor를 다룹나다.
+- findVal, reduce은 컬렉션을 다룹니다.
 
 
 
