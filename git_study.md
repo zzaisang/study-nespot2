@@ -85,7 +85,7 @@ git 구조
 ## git 바깥에 있는 파일들 관리
 ----
 - git add -A => untract 파일 및 변경 삭제 파일 등등 모두 staged에 올려버린다.
-- git add -u => not staged인 파일만 staged도 바꿔버림.
+- git add -u => not staged인 파일만 staged로 바꿔버림.
 
 ## git remote
 ----
