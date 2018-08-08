@@ -7,14 +7,8 @@
 - github project 복사(local과 project 연결)
 
 ```
- git clone git@github.com:nespot2/study-nespot2.git
+ git clone https://github.com/nespot2/study-nespot2.git
 ```  
-
-- git remote 명령으로 현재 프로젝트에 등록된 리모트 저장소를 확인할 수 있다.
-
-```
- git clone -v
-```
 
 - SSH 공개키 만들기(git push를 사용하기 위해 ssh 공개키가 필요하다.)
 - ssh-keygen 명령어를 사용하면 public key가 id_rsa.md 파일에 만들어 진다. (먼저 키를 어디에 저장할지 경로를(.ssh/id_rsa) 입력하고 암호를 두 번 입력한다. 이때 암호를 비워두면 키를 사용할 때 암호를 묻지 않는다. => 다 무시하고 그냥 엔터 입력)
