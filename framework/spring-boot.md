@@ -7,7 +7,6 @@
  
 
 ### spring boot 구조
-
  - [문서](https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#using-boot-structuring-your-code)
  - 메이븐 기본 프로젝트 구조와 동일
  	1. 소스 코드 (src\main\java)
@@ -18,24 +17,21 @@
  
  
 ### spring boot 원리
-
-	 - spring boot는 의존성 관리를 알아서해준다. spring-start-parent에서 모든 버전을 property로 관리를 해준다.
+- spring boot는 의존성 관리를 알아서해준다. spring-start-parent에서 모든 버전을 property로 관리를 해준다.
 
 
 #### spring boot 자동 설정 원리
-
-	0. [문서](https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#boot-features-developing-auto-configuration)
-	1. @SpringbootApplication => @SpringConfiguration(configuration 이랑 같음), @ComponentScan, @EnableAutoConfiguration
-	2. @SpringbootApplication 실행
-		2.1 처음 @ComponentScan으로 component bean 등록, 자기 자신도 bean 등록.
-		2.2 그다음 EnableAutoConfiguration 실행
-		2.3 spring-boot-autoconfigure.jar => spring.factories에 org.springframework.boot.autoconfigure.EnableAutoConfiguratio 변수에 정의되어 있는  모든 클랙스를 모두 bean 등록한다.
+0. [문서](https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#boot-features-developing-auto-configuration)
+1. @SpringbootApplication => @SpringConfiguration(configuration 이랑 같음), @ComponentScan, @EnableAutoConfiguration
+2. @SpringbootApplication 실행
+	2.1 처음 @ComponentScan으로 component bean 등록, 자기 자신도 bean 등록.
+	2.2 그다음 EnableAutoConfiguration 실행
+	2.3 spring-boot-autoconfigure.jar => spring.factories에 org.springframework.boot.autoconfigure.EnableAutoConfiguratio 변수에 정의되어 있는  모든 클랙스를 모두 bean 등록한다.
 	
-	3. spring-boot-autoconfigure를 커스텀마이징 하여 EnableAutoConfigureation에 포함 할 수 있음
+3. spring-boot-autoconfigure를 커스텀마이징 하여 EnableAutoConfigureation에 포함 할 수 있음
 	
 ### 커스텀 마이징 구현 방법(jar 만들기)
-
-	1. 의존성 추가
+- 의존성 추가
 	
 ```XML
 <dependencies>
@@ -63,16 +59,14 @@
 </dependencyManagement>
 ```
 
-	2. @Configuration 파일 작성
-	3. src/main/resource/META-INF에 spring.factories 파일 만들기
-	4. spring.factories 안에 자동 설정 파일 추가
+- @Configuration 파일 작성
+- src/main/resource/META-INF에 spring.factories 파일 만들기
+- spring.factories 안에 자동 설정 파일 추가
+
 
 ```
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
 FQCN,\
 FQCN
 ```
-	5. mvn install
-
-		
-
+- mvn install
