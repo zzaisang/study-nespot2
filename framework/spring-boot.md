@@ -23,9 +23,9 @@
 0. [문서](https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#boot-features-developing-auto-configuration)
 1. @SpringbootApplication => @SpringConfiguration(configuration 이랑 같음), @ComponentScan, @EnableAutoConfiguration
 2. @SpringbootApplication 실행
-	2.1 처음 @ComponentScan으로 component bean 등록, 자기 자신도 bean 등록.
-	2.2 그다음 EnableAutoConfiguration 실행
-	2.3 EnableAutoConfiguration => spring-boot-autoconfigure.jar => spring.factories에 org.springframework.boot.autoconfigure.EnableAutoConfiguratio 변수에 정의되어 있는  모든 클랙스를 모두 bean 등록한다.
+	- 처음 @ComponentScan으로 component bean 등록, 자기 자신도 bean 등록.
+	- 그다음 EnableAutoConfiguration 실행
+	- EnableAutoConfiguration => spring-boot-autoconfigure.jar => spring.factories에 org.springframework.boot.autoconfigure.EnableAutoConfiguratio 변수에 정의되어 있는  모든 클랙스를 모두 bean 등록한다.
 	
 3. spring-boot-autoconfigure를 커스텀마이징 하여 EnableAutoConfigureation에 포함 할 수 있음
 	
