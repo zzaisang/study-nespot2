@@ -17,8 +17,12 @@
  
  
 
-### spring boot  원리
+### spring boot  의존성 관리
+
+- [문서](https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#using-boot-dependency-management)
 - spring boot는 의존성 관리를 알아서해준다. spring-start-parent에서 모든 버전을 property로 관리를 해준다.
+
+### spring boot 자동 설정
 
 0. [문서](https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#boot-features-developing-auto-configuration)
 1. @SpringbootApplication => @SpringConfiguration(configuration 이랑 같음), @ComponentScan, @EnableAutoConfiguration
@@ -85,3 +89,71 @@ FQCN
 ```
 
 - mvn install
+
+
+### spring boot 내장 웹 서버
+
+- spring boot는 서버가 아닙니다.
+- ServletWebServerFactoryAutoConfiguration 에서 웹 서버를 생성하고
+- DispatcherServletAutoConfiguration에서 dispatcher servlet을 생성하고 웹 서버에 등록하는 역할을 합니다.
+
+```java
+
+	//서버 생성
+	Tomcat tomcat = new Tomcat();
+    tomcat.setPort(8080);
+    Context context = tomcat.addContext("/","/");
+
+	//서블렛 생성
+    HttpServlet servlet = new HttpServlet() {
+      @Override
+      protected void doGet(HttpServletRequest req, HttpServletResponse resp)
+          throws ServletException, IOException {
+        PrintWriter writer = resp.getWriter();
+        writer.println("<html>");
+        writer.println("<head>");
+        writer.println("<head/>");
+        writer.println("<body>");
+        writer.println("<h1>hello</h1>");
+        writer.println("<body/>");
+        writer.println("<html/>");
+
+      }
+    };
+
+	//서블렛 등록
+    tomcat.addServlet("/","hello",servlet);
+    context.addServletMappingDecoded("/hello","hello");
+
+
+	//서비 시작
+    tomcat.start();
+    tomcat.getServer().await();
+```
+
+- 위 코드를 ServletWebServerFactoryAutoConfiguration, DispatcherServletAutoConfiguration가 대신합니다!
+- spring-boot-autoconfigure.jar, spring.factories에 포함되어 있기 때문입니다.
+
+### 독립적으로 실행 가능한 JAR
+
+- mvn package를 하면 실행 가능한 JAR 파일 “하나가” 생성 됨.
+- spring-maven-plugin이 해주는 일 (패키징)
+- 스프링 부트의 전략
+	- 내장 JAR : 기본적으로 자바에는 내장 JAR를 로딩하는 표준적인 방법이 없음.
+	- 애플리케이션 클래스와 라이브러리 위치 구분
+	- org.springframework.boot.loader.jar.JarFile을 사용해서 내장 JAR를 읽는다.
+	- org.springframework.boot.loader.Launcher를 사용해서 실행한다.
+
+
+### Spring boot 원리 정리
+
+- 의존성 관리
+	- 이것만 넣어도 이만큼이나 다 알아서 가져오네?
+- 자동 설정
+	- @EnableAutoConfiguration이 뭘 해주는지 알겠어.
+- 내장 웹 서버
+	- 아 스프링 부트가 서버가 아니라 내장 서버를 실행하는 거군.
+- 독립적으로 실행 가능한 JAR
+	- spring-boot-maven 플러그인이 이런걸 해주는구나..
+
+
