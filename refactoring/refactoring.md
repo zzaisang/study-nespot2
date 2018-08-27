@@ -1,5 +1,5 @@
 
-- 이글은 (이곳)[https://refactoring.guru/refactoring/what-is-refactoring]의 컨텐츠를 번역한 내용입니다.
+- 이글은 (이곳)[https://refactoring.guru/refactoring/what-is-refactoring] 의 컨텐츠를 번역한 내용입니다.
 
 # 리팩토링은 무엇인가?
 ---- 
