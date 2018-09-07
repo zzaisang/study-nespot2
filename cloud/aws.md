@@ -25,18 +25,26 @@
 ----
 - EC2(Elastic Compute Cloud)는 독립된 컴퓨터를 임대해주는 서비스입니다. 
 - EC2 생성방법
-	1. AMI 선택(aws linux 2 선택)
-	2. 모든 인스턴스 유형(t2.micro 선택 => 프리 티어 사용가능)
-	3. 인스턴스 서버 구성
-	4. 스토리지 추가
-	5. 태크 추가
-	6. 보안 그룹 구성(ip 제한을 줄 수 있다.)
-	7. 검토 => luanch 버튼을 누르면 비밀번호 파일을 생성합니다. => 해당 비밀번호로 instance 접근 가능합니다.
+	- AMI 선택(aws linux 2 선택)
+	- 모든 인스턴스 유형(t2.micro 선택 => 프리 티어 사용가능)
+	- 인스턴스 서버 구성
+	- 스토리지 추가
+	- 태크 추가
+	- 보안 그룹 구성(ip 제한을 줄 수 있다.)
+	- 검토 => luanch 버튼을 누르면 비밀번호 파일을 생성합니다. => 해당 비밀번호로 instance 접근 가능합니다.
 	
 - EC 접근 방법(mac os)
-	1. open terminal
-	2. 비밀번호 파일이 있는 디렉토리로 이동
-	3. 비밀번호 파일 권한이 400이 아니면 옆과 같은 명령어 실행 => chmod 400 파일명.pem
-	4. ssh -i "webpwd.pem" ec2-user@ec2-13-125-83-42.ap-northeast-2.compute.amazonaws.com => 접속
+	- open terminal
+	- 비밀번호 파일이 있는 디렉토리로 이동
+	- 비밀번호 파일 권한이 400이 아니면 옆과 같은 명령어 실행 => chmod 400 파일명.pem
+	- ssh -i "webpwd.pem" ec2-user@ec2-13-125-83-42.ap-northeast-2.compute.amazonaws.com => 접속
+	
+- java jdk-8 설치
+
+```
+sudo yum install -y java-1.8.0-openjdk-devel.x86_64
+
+```
+
 	
 	
