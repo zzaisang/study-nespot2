@@ -97,3 +97,19 @@ git remote add origin “Remote Repository URL”
 git remote -v
 ```
 
+## git branch, diff 명령어
+----
+
+```
+- git branch => branch 목록
+- git checkout -b updates => updates branch 생성
+- git checkout updates => updates branch를 기준으로 변경
+- git checkout master => master branch를 기준으로 변경
+- git diff master updates => master, updates branch 비교
+- git merge master updates => master, updates branch 머지
+- git checkout -d updates => updates branch 삭제
+```
+
+
+
+
