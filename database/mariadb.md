@@ -29,3 +29,17 @@
 	- update user set password=password('변경할비밀번호') where user='root';
 	- flush privileges;
 	- exit;
+	
+	
+- mariadb db export (dump)
+
+```sql
+mysqldump -u{계정} --port={port} --host={host} -p{password} {database_name} > data-dump.sql
+```
+
+- mariadb db import (dump)
+
+```sql
+mysql -u{계정} -p{password} {database_name} < data-dump.sql
+
+```
