@@ -1,7 +1,7 @@
 # functional programming을 이용한 quick-sort 구현
 
 ```javascript
-const {go, map, reduce, each} = require("./functional.es");
+const {go, map, reduce, each,curry2} = require("./functional.es");
 
 const comp = (a, b) => {
     if (a > b) {
@@ -13,11 +13,9 @@ const comp = (a, b) => {
     }
 };
 
-function quickSort(arr, c) {
-    return arr.length > 1 ? exec(arr, c) : arr;
-}
+const quickSort = curry2((c,arr) => arr.length > 1 ? exec(c,arr) : arr);
 
-const exec = (arr, c) => {
+const exec = (c,arr) => {
     const pivot = arr[0];
     const result = [[], [], []];
 
@@ -30,11 +28,15 @@ const exec = (arr, c) => {
 
     return go(
         [0, 1, 2],
-        map(i => quickSort(result[i], c)),
+        map(i => quickSort(c,result[i])),
         arr => reduce((a, b) => a.concat(b), [], arr)
     );
 };
 
 
-console.log(quickSort([5, 4, 3, 2, 1], comp));
+go(
+    [5,4,3,2,1],
+    quickSort(comp),
+    console.log
+)
 ```
