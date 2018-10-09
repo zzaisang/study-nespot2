@@ -13,9 +13,9 @@ const comp = (a, b) => {
     }
 };
 
-const quickSort = curry2((c,arr) => arr.length > 1 ? exec(c,arr) : arr);
+const quickSort = curry2((c, arr) => arr.length > 1 ? exec(c, arr) : arr);
 
-const exec = (c,arr) => {
+const exec = (c, arr) => {
     const pivot = arr[0];
     const result = [[], [], []];
 
@@ -26,13 +26,18 @@ const exec = (c,arr) => {
         })
     );
 
-    return go(
+    const onlyEqual = go(
+        result,
+        filter(arr => arr.length > 0),
+        rst => rst.length < 2 && rst[0][0] == pivot
+    )
+
+    return onlyEqual ? result[1] : go(
         [0, 1, 2],
-        map(i => quickSort(c,result[i])),
+        map(i => quickSort(c, result[i])),
         arr => reduce((a, b) => a.concat(b), [], arr)
     );
 };
-
 
 go(
     [5,4,3,2,1],
