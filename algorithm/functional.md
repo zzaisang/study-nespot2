@@ -3,16 +3,6 @@
 ```javascript
 const {go, map, reduce, each,curry2} = require("./functional.es");
 
-const comp = (a, b) => {
-    if (a > b) {
-        return 1;
-    } else if (a < b) {
-        return -1;
-    } else {
-        return 0;
-    }
-};
-
 const quickSort = curry2((c, arr) => arr.length > 1 ? exec(c, arr) : arr);
 
 const exec = (c, arr) => {
@@ -41,7 +31,15 @@ const exec = (c, arr) => {
 
 go(
     [5,4,3,2,1],
-    quickSort(comp),
+    quickSort((a, b) => {
+    	if (a > b) {
+        	return 1;
+    	} else if (a < b) {
+        	return -1;
+    	} else {
+        	return 0;
+    	}
+	}),
     console.log
 )
 ```
