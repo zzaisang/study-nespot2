@@ -1,4 +1,4 @@
-### 문자열 내마음대로 정렬하기
+### 1. 문자열 내마음대로 정렬하기
 
 - [문제](https://programmers.co.kr/learn/courses/30/lessons/12915)
 
@@ -105,7 +105,7 @@ function solution(strings, n) {
 }
 ```
 
-### 느낀점
+#### 느낀점
 
 - 사실 strings.sort(c)를 하면 바로 해결되는 아주 간단한 문제이나 functional programming 공부를 하다보니 오버엔지니어링 하는 결과가 나오게 되었다.
 
