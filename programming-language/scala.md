@@ -27,7 +27,7 @@ def constOne(x:Int, f:Int => Int) : Int = x //f는 함수이기때문에 call-by
 
 - 다시 한번 말하지만 scala는 call-by-value이기 때문에 반환하기전 계산을 먼저 한다.
 
-```
+```scala
 val a = (1+1) + (2+2) // 2 + 4 => 6
 
 def constOne = 1
