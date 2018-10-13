@@ -3,7 +3,7 @@
 ## Functional Programming Principles in Scala(강좌)
 
 
-### Functions & Evaluation
+### 1. Functions & Evaluation
 
 - call-by-name vs call by reference
 
