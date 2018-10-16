@@ -45,3 +45,10 @@ mysqldump -u{계정} --port={port} --host={host} -p{password} {database_name} > 
 mysql -u{계정} -p{password} {database_name} < data-dump.sql
 
 ```
+
+- tabler 컬럼 삭제
+
+```sql
+ALTER TABLE {TABLE 명} drop {컬럼 명}
+```
+
