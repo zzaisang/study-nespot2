@@ -49,6 +49,6 @@ mysql -u{계정} -p{password} {database_name} < data-dump.sql
 - tabler 컬럼 삭제
 
 ```sql
-ALTER TABLE {TABLE 명} drop {컬럼 명}
+ALTER TABLE {TABLE 명} DROP {컬럼 명}
 ```
 
