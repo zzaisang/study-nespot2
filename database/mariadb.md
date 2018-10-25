@@ -70,33 +70,33 @@ ALTER TABLE [테이블명] CHANGE [컬럼이름] [새컬럼이름] [새컬럼타
 
 - 인덱스에 새항목 추가
 
-```
+```sql
 ALTER TABLE [테이블명] ADD INDEX([컬럼이름])
 ```
 
 - 인덱스 삭제
 
-```
+```sql
 ALTER TABLE [테이블명] DROP INDEX [컬럼이름]
 DROP INDEX [인덱스이름] ON [테이블명]
 ```
 
 - 기본키(Primary Key or PK) 지정하기
 
-```
+```sql
 ALTER TABLE [테이블명] ADD PRIMARY KEY([컬럼이름]);
 ```
 
 
 - 기본키(Primary Key or PK) 삭제하기
 
-```
+```sql
 ALTER TABLE [테이블명] DROP PRIMARY KEY;
 ```
 
 - 자동 증가 값 초기화 하기
 
-```
+```sql
 ALTER TABLE [테이블명] AUTO_INCREMENT=[a];        // a값에는 시작하고 싶은 정수를 입력하면 됨
 ```
 
