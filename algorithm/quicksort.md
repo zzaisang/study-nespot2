@@ -1,4 +1,4 @@
-# functional programming을 이용한 quick-sort 구현
+# quick-sor with javascrript
 
 ```javascript
 const {go, map, reduce, each,curry2} = require("./functional.es");
