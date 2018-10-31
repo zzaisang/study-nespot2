@@ -34,12 +34,3 @@ def constOne = 1
 val one = constOne //javascript와는 다르다. javascript에서는 one은 function이 되지만 scala에서는 constOne의 return값이 one에 반환된다.
 ```
 
-----
-
-```java
-
-int a = 10;
-
-
-
-```
