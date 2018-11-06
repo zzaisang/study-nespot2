@@ -100,3 +100,10 @@ ALTER TABLE [테이블명] DROP PRIMARY KEY;
 ALTER TABLE [테이블명] AUTO_INCREMENT=[a];        // a값에는 시작하고 싶은 정수를 입력하면 됨
 ```
 
+- SHOW COLUMNS
+
+```sql
+SHOW COLUMNS FROM [테이블명]
+```
+
+
