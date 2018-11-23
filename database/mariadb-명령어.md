@@ -37,6 +37,12 @@
 mysqldump -u{계정} --port={port} --host={host} -p{password} {database_name} > data-dump.sql
 ```
 
+- maria db import (dump)
+
+```sql
+mysql -u <username> -p <DBName> < yourfile.sql
+```
+
 - {host} jdbc:mariadb는 제거한다.
 
 - mariadb db import (dump)
