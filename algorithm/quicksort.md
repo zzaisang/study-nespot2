@@ -1,4 +1,4 @@
-# quick-sor with javascrript
+# quick-sort with javascrript
 
 ```javascript
 const {go, map, reduce, each,curry2} = require("./functional.es");
