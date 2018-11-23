@@ -107,6 +107,7 @@ function solution(strings, n) {
 
 #### 느낀점
 
-- 사실 strings.sort(c)를 하면 바로 해결되는 아주 간단한 문제이나 functional programming 공부를 하다보니 오버엔지니어링 하는 결과가 나오게 되었다.
+- 사실 strings.sort(c)를 하면 바로 해결되는 아주 간단한 문제이나 go function을 이용해 이 문제를 해결하고 싶었다. 
+- 결과적으로 오버엔지니어링 하는 결과가 나왔다.
 
 
