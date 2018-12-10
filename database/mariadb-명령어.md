@@ -106,4 +106,24 @@ ALTER TABLE [테이블명] AUTO_INCREMENT=[a];        // a값에는 시작하고
 SHOW COLUMNS FROM [테이블명]
 ```
 
+- mariadb 계정 조회
+
+```sql
+use mysql;
+select * from user;
+```
+
+- mariadb 계정 삭제
+
+```
+drop user '계정'@'접속위치'
+```
+
+- 계정 권한 확인
+
+```sql
+show grants for 'user'@'접속위치';
+```
+
+
 
