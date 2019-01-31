@@ -6,7 +6,7 @@
 	- mysql.server stop
 
 - mariadb 계정접속
-    - Mysql -u nespot2 -p nice
+    - mysql -u{계정} --host {host} -p
     - 패스워드 입력
     - Then can access nice db on mariadb
 
@@ -14,11 +14,11 @@
     - Create database nice
     - Nice db 생성됨
 - mariadb 계정 생성방법
-	- create user ‘nespot2’@‘localhost’ identified by ‘zaq1234!’;
+	- create user ‘nespot2’@‘%’ identified by ‘zaq1234!’;
 	- Nespot2 계정생성
 
 - 권한부여
-    - grant all privileges on nice.* to nespot2@‘localhost’;
+    - grant all privileges on nice.* to nespot2@‘%’;
 
 - 컬럼 확인방법
 	- SHOW COLUMNS FROM mytable FROM mydb;
@@ -123,6 +123,12 @@ drop user '계정'@'접속위치'
 
 ```sql
 show grants for 'user'@'접속위치';
+```
+
+- 최대 dbconnection 확인
+
+```sql
+show variables like 'max_connections';
 ```
 
 
