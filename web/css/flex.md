@@ -9,7 +9,7 @@
 - justify-content는 축을 기준으로 정렬합니다.
 - align-items는 축의 수직방향을 기준으로 정렬합니다. 
 - flex-grow는 content폭을 제외한 여백을 공유합니다.
-- flex-basis: 0으로 하면 content가 포함한 비율을 공유합니다.
+- flex-basis: 0으로 하면 content가 포함한 비율을 공유합니다.
 - flex : 0으로 해주면 flex-basis, flex-grow를 실행한 것과 동일합니다.
 
 - 예제
