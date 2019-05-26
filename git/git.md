@@ -110,6 +110,13 @@ git remote -v
 - git checkout -d updates => updates branch 삭제
 ```
 
+## git .ignore 파일 수정 후 정상적으로 적용되지 않을때
+
+```git
+git rm -r --cached .
+git add .
+git commit -m "fixed untracked files"
+```
 
 
 
