@@ -34,9 +34,49 @@
 
 3. 웹에서는 DB 결과값을 조회합니다.
 
+----
+
+# toytrip 기획2(2019-06-16)
+
+## 개발해야할 프로그램
+
+### 1. 웹 스크래핑 프로그램
+
+- 개요
+    - 항공권 정보를 웹 스크랩핑 후 json 파일 저장
+- 사용 언어
+    - python3 with selenium, beautifulsoup4
 
 
+### 2. 배치 프로그램 
 
+- 개요
+    - json 파일을 읽어서 디비에 저장(배치) 
+- 사용 언어
+    - java8 with spring batch, spring boot
+    
+### 3. API 프로그램 
 
+- 개요   
+    - output을 json 형태로 제공하는 API (java with spring mvc, spring boot)
+- 사용 언어
+    - java8 with java with spring mvc, spring boot, spring jpa
+    
+    
+### 4. 웹 프로그램
 
+- 개요
+    - api 데이터를 조회하여 웹 화면에 제공 
+- 사용 언어
+    - html,css,javascript with react.js
 
+### 오늘 작업 내용
+
+1. 웹 스크래핑을 위한 디비 모델링
+    - 국가코드, 항공사코드
+    - 웹 스크래핑 대상 target
+2. 국가코드, 항공사코드 저장
+    - 웹 크롤링을 이용하여 데이터를 가져온 후 저장하자(크롤링 연습)
+
+    
+    
